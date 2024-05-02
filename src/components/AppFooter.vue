@@ -64,7 +64,6 @@ export default {};
     height: 50vh;
     display: flex;
     background-image: url(../assets/img/footer-bg.jpg);
-    // background-color: grey;
 
     .list {
       display: flex;
