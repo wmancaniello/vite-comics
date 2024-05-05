@@ -116,14 +116,10 @@ export default {
   padding: 10px;
   display: flex;
   flex-direction: column;
-}
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-.card-info {
-  margin-top: 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>
