@@ -1,15 +1,40 @@
 <script>
-export default {};
+import AppCards from './AppCards.vue';
+
+export default {
+  components: {
+    AppCards,
+  },
+};
 </script>
 
 <template>
   <div class="main">
     <div class="content">
-      <h2>!!! Content goes here !!!</h2>
+      <AppCards />
     </div>
     <div class="icon-container">
       <div class="icon-main">
-        <h2>!!!icone da inserire!!!</h2>
+        <div class="comics-logo">
+          <img src="../assets/img/buy-comics-digital-comics.png" alt="" />
+          <h5>DIGITAL COMICS</h5>
+        </div>
+        <div class="comics-logo">
+          <img src="../assets/img/buy-comics-merchandise.png" alt="" />
+          <h5>DC MERCHANDISE</h5>
+        </div>
+        <div class="comics-logo">
+          <img src="../assets/img/buy-comics-subscriptions.png" alt="" />
+          <h5>SUBSCRIPTION</h5>
+        </div>
+        <div class="comics-logo">
+          <img src="../assets/img/buy-comics-shop-locator.png" alt="" />
+          <h5>COMIC SHOP LOCATOR</h5>
+        </div>
+        <div class="comics-logo">
+          <img src="../assets/img/buy-dc-power-visa.svg" alt="" />
+          <h5>DC POWER VISA</h5>
+        </div>
       </div>
     </div>
   </div>
@@ -41,9 +66,23 @@ export default {};
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #0082F9;
+    background-color: #0082f9;
     height: 15vh;
     width: 100%;
+
+    .icon-main {
+      display: flex;
+
+      .comics-logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          max-width: 20%;
+        }
+      }
+    }
 
     h2 {
       display: flex;

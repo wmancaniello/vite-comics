@@ -50,6 +50,9 @@ export default {};
           </ul>
         </div>
       </div>
+      <div class="logo-bg">
+        <img src="../assets/img/dc-logo-bg.png" alt="" />
+      </div>
     </div>
     <div class="footer-end">
       <div>SIGN UP NOW</div>
@@ -61,9 +64,19 @@ export default {};
 <style lang="scss" scoped>
 .footer {
   .footer-top {
-    height: 50vh;
+    height: 80%;
     display: flex;
+    justify-content: space-around;
     background-image: url(../assets/img/footer-bg.jpg);
+
+    .logo-bg {
+      
+      img {
+        max-width: 60%;
+        height: auto; /* Per mantenere l'aspetto proporzionato */
+        display: block; /* Rimuove lo spazio extra sotto l'immagine */
+      }
+    }
 
     .list {
       display: flex;
@@ -92,7 +105,7 @@ export default {};
   }
 
   .footer-end {
-    height: 20vh;
+    height: 20%;
     background-color: #303030;
     color: white;
     text-align: center;

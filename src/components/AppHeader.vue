@@ -1,5 +1,52 @@
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      menu: [
+        {
+          title: "CHARACTERS",
+          active: false,
+        },
+        {
+          title: "COMICS",
+          active: true,
+        },
+        {
+          title: "MOVIES",
+          active: false,
+        },
+        {
+          title: "TV",
+          active: false,
+        },
+        {
+          title: "GAMES",
+          active: false,
+        },
+        {
+          title: "COLLECTIBLES",
+          active: false,
+        },
+        {
+          title: "VIDEOS",
+          active: false,
+        },
+        {
+          title: "FANS",
+          active: false,
+        },
+        {
+          title: "NEWS",
+          active: false,
+        },
+        {
+          title: "SHOP",
+          active: false,
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <template>
@@ -9,16 +56,9 @@ export default {};
     </div>
     <div class="menu-list">
       <ul>
-        <li><a href="#">CHARACTERS</a></li>
-        <li><a href="#">COMICS</a></li>
-        <li><a href="#">MOVIES</a></li>
-        <li><a href="#">TV</a></li>
-        <li><a href="#">GAMES</a></li>
-        <li><a href="#">COLLECTIBLES</a></li>
-        <li><a href="#">VIDEOS</a></li>
-        <li><a href="#">FANS</a></li>
-        <li><a href="#">NEWS</a></li>
-        <li><a href="#">SHOP</a></li>
+        <li v-for="item in menu" :key="item.title">
+          <a href="" :class="{ active: item.active }">{{ item.title }}</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -26,12 +66,11 @@ export default {};
 
 <style lang="scss" scoped>
 .header {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 
   .logo {
     display: flex;
-
   }
 
   .menu-list {
@@ -39,8 +78,13 @@ export default {};
     align-items: center;
 
     ul {
-        display: flex;
-        gap: 15px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .active {
+      font-weight: bold;
+      color: blue;
     }
   }
 }
