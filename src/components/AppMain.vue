@@ -52,7 +52,7 @@ export default {
     justify-content: center;
     align-content: center;
     color: white;
-    height: 15vh;
+    // height: 15vh;
 
     h2 {
       display: flex;

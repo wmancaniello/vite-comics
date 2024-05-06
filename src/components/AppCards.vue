@@ -107,19 +107,21 @@ export default {
 <style lang="scss" scoped>
 .comics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
-}
 
-.card {
+  .card {
+    margin: 20px 0;
   border: 1px solid #ccc;
   padding: 10px;
   display: flex;
   flex-direction: column;
 
   img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
   }
 }
+}
+
+
 </style>
